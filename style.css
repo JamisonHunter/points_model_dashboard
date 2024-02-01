@@ -18,7 +18,7 @@ body {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     overflow: auto;
-    margin: 0 20px 0 20px; /* Add margin to separate the models */
+    margin: 0 20px 0 20px; 
 }
 
 .label-container {
