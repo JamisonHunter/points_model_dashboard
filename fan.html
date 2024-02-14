@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minty Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="partner.html">Partner Points</a></li>
+                <li><a href="fan.html">Fan Points</a></li>
+                <li><a href="exchange.html">Exchange</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h1>Fan Points</h1>
+    </div>
+
+    <div class="container">
+        <label for="seasonTicketRevenue">What is your total season ticket revenue?</label>
+        <input type="number" id="seasonTicketRevenue" min="0">
+    
+        <label for="gameTicketRevenue">What is your total single game ticket revenue?</label>
+        <input type="number" id="gameTicketRevenue" min="0">
+    
+        <label for="percentTicketRevenue">What % of your total ticket revenue do you want to
+            allocate to points?</label>
+        <input type="number" id="percentTicketRevenue" min="0">
+    
+        <label for="pointValue">How much do you want to charge per point?</label>
+        <input type="number" id="pointValue" min="0">
+    
+        <button onclick="calculateFan()">Calculate</button>
+    
+        <label for="totalRevenue"></label>
+        <p id="totalRevenue" class="answer"></p>
+        <label for="totalPoints"></label>
+        <p id="totalPoints" class="answer"></p>
+        <label for="pointValue"></label>
+        <p id="pointsValue" class="answer"></p>
+    
+        <script src="main.js"></script>
+    </div>
+
+    <footer>
+        <p>This is the footer.</p>
+    </footer>
+</body>
+
+</html>

@@ -1,63 +1,96 @@
-body {
-    background-color: #0d1b2a;
-    color: white;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+/* Updated CSS */
+body, html {
     margin: 0;
-    display: flex;
-    align-items: center;
-    min-height: 100vh;
-}
-
-.model {
-    display: flex;
-    flex-direction: column;
-    max-width: 600px;
-    width: 100%;
-    background-color: #1a2b42;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    overflow: auto;
-    margin: 0 20px 0 20px; 
-}
-
-.label-container {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 20px;
-}
-
-label {
-    margin-bottom: 8px;
-}
-
-input {
-    width: 100%;
-    padding: 10px;
-    box-sizing: border-box;
-    border: 1px solid #3b4d63;
-    border-radius: 5px;
-    background-color: #15202b;
+    padding: 0;
+    min-height: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 20px;
     color: white;
-    font-size: 16px;
+    background-color: #0b0c10;
+}
+
+header {
+    background-color: #333;
+    padding: 20px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.container {
+    background-color: #232323;
+    margin: 40px;
+    border-radius: 20px;
+    padding: 40px;
+}
+
+.container label {
+    display: block;
     margin-bottom: 10px;
 }
 
-button {
-    background-color: #3498db;
-    color: white;
+.container input[type="number"] {
+    width: 100%;
     padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: none;
+}
+
+.percent-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.percent-container label, .percent-container input[type="number"], .percent-container h2 {
+    margin-right: 20px;
+}
+
+.percent-container input[type="number"] {
+    width: 100px; /* Adjust width as needed */
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 16px;
 }
 
 button:hover {
-    background-color: #2980b9;
+    background-color: #45a049;
 }
 
-p {
+.answer {
     margin-top: 20px;
-    font-size: 18px;
+}
+
+footer {
+    background-color: #232323;
+    color: white;
+    padding: 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+#hot-container {
+    width: 100%;
+    height: 100%;
 }

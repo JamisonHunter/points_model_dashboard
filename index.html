@@ -5,140 +5,46 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profit Margin Calculator</title>
+    <title>Minty Dashboard</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <div class="model-3 model">
-        <h2>Example Fan Spending</h2>
-        <label for="fanSpending">Enter Amount Spent By Fan:</label>
-        <input type="number" id="fanSpending" min="0">
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="partner.html">Partner Points</a></li>
+                <li><a href="fan.html">Fan Points</a></li>
+                <li><a href="exchange.html">Exchange</a></li>
+            </ul>
+        </nav>
+    </header>
 
-        <label for="pointValue3">Enter Value of Each Point:</label>
-        <input type="number" id="pointValue3" min="0">
-
-        <button onclick="calculateModel3()">Calculate</button>
-
-        <p id="fanPointsEarned3"></p>
-        <p id="fanPointsValue3"></p>
-        <script>
-            function calculateModel3() {
-                var fanSpending = parseFloat(document.getElementById("fanSpending").value);
-                var pointValue3 = parseFloat(document.getElementById("pointValue3").value);
-
-                var fanPointsEarned3 = 2 * fanSpending;
-                var fanPointsValue3 = fanPointsEarned3 * pointValue3
-
-                document.getElementById("fanPointsEarned3").innerText = "Fan Points Earned: " + fanPointsEarned3.toFixed(0);
-                document.getElementById("fanPointsValue3").innerText = "Fan Points Value: $" + fanPointsValue3.toFixed(2);
-            }
-        </script>
+    <div class="container">
+        <div class="home-title">
+            <h1>Digital Currency Calculator</h1>
+        </div>
+        <div class="logo-box">
+            <p>Logo Image Location</p>
+        </div>
     </div>
 
-    <div class="model-1 model">
-        <h2>Model One</h2>
-        <label for="teamSubscription">Enter Team Subscription Amount:</label>
-        <input type="number" id="teamSubscription" min="0">
-
-        <label for="pointValue">Enter Value of Each Point:</label>
-        <input type="number" id="pointValue" min="0">
-
-        <label for="jerseySales">Enter Jersey Sales:</label>
-        <input type="number" id="jerseySales" min="0">
-
-        <label for="jerseyPercentReturn">Enter Jersey Percent Return:</label>
-        <input type="number" id="jerseyPercentReturn" min="0" max="100">
-
-        <label for="drinkSales">Enter Drink Sales:</label>
-        <input type="number" id="drinkSales" min="0">
-
-        <label for="drinkPercentReturn">Enter Drink Percent Return:</label>
-        <input type="number" id="drinkPercentReturn" min="0" max="100">
-
-        <label for="ticketSales">Enter Ticket Sales:</label>
-        <input type="number" id="ticketSales" min="0">
-
-        <label for="ticketPercentReturn">Enter Ticket Percent Return:</label>
-        <input type="number" id="ticketPercentReturn" min="0" max="100">
-
-        <button onclick="calculate()">Calculate</button>
-
-        <p id="profit"></p>
-        <p id="fanPointsEarned"></p>
-        <p id="fanPointsValue"></p>
-
-        <script>
-            function calculate() {
-                // Get the values from input fields
-                var teamSubscription = parseFloat(document.getElementById("teamSubscription").value);
-                var pointValue = parseFloat(document.getElementById("pointValue").value);
-                var jerseySales = parseFloat(document.getElementById("jerseySales").value);
-                var jerseyPercentReturn = parseFloat(document.getElementById("jerseyPercentReturn").value);
-                var drinkSales = parseFloat(document.getElementById("drinkSales").value);
-                var drinkPercentReturn = parseFloat(document.getElementById("drinkPercentReturn").value);
-                var ticketSales = parseFloat(document.getElementById("ticketSales").value);
-                var ticketPercentReturn = parseFloat(document.getElementById("ticketPercentReturn").value);
-
-                // Perform the calculations
-                var fanPointsEarned = 2 * (jerseySales + ticketSales + drinkSales);
-                var fanPointsValue = fanPointsEarned * pointValue;
-                var profit = (jerseySales * (jerseyPercentReturn / 100) + ticketSales * (ticketPercentReturn / 100) + drinkSales * (drinkPercentReturn / 100)) - teamSubscription;
-
-                // Display the results
-                document.getElementById("profit").innerText = "Profit Margin: $" + profit.toFixed(2);
-                document.getElementById("fanPointsEarned").innerText = "Fan Points Earned: " + fanPointsEarned;
-                document.getElementById("fanPointsValue").innerText = "Fan Points Value: $" + fanPointsValue.toFixed(2);
-            }
-        </script>
+    <div class="container">
+        <div class="home-paragraph">
+            <P>The following “wizards” help teams
+                explore “what if” scenarios and build
+                models for deploying:</P>
+            <ul>
+                <li>Partner Points</li>
+                <li>Fan Points</li>
+                <li>Points Exchange</li>
+            </ul>
+        </div>
     </div>
-    
-    <div class="model-2 model">
-        <h2>Model Two</h2>
-        <label for="teamSubscription2">Enter Team Subscription Amount:</label>
-        <input type="number" id="teamSubscription2" min="0">
 
-        <label for="pointValue2">Enter Value of Each Point:</label>
-        <input type="number" id="pointValue2" min="0">
-
-        <label for="fans">Enter Number of Fans In Points System:</label>
-        <input type="number" id="fans" min="0">
-
-        <label for="averageSpent">Enter Average Amount Spent By Fans:</label>
-        <input type="number" id="averageSpent" min="0">
-
-        <label for="averageReturn">Enter Average Percent Return:</label>
-        <input type="number" id="averageReturn" min="0" max="100">
-
-        <button onclick="calculateModel2()">Calculate</button>
-
-        <p id="profit2"></p>
-        <p id="fanPointsEarned2"></p>
-        <p id="fanPointsValue2"></p>
-        <script>
-            // You can keep the existing calculate() function for model-1
-    
-            function calculateModel2() {
-                // Get the values from input fields for model-2
-                var teamSubscription2 = parseFloat(document.getElementById("teamSubscription2").value);
-                var pointValue2 = parseFloat(document.getElementById("pointValue2").value);
-                var fans = parseFloat(document.getElementById("fans").value);
-                var averageSpent = parseFloat(document.getElementById("averageSpent").value);
-                var averageReturn = parseFloat(document.getElementById("averageReturn").value);
-    
-                // Perform the calculations for model-2
-                var fanPointsEarned2 = 2 * averageSpent * fans;
-                var fanPointsValue2 = fanPointsEarned2 * pointValue2;
-                var profit2 = (averageReturn / 100) * averageSpent * fans - teamSubscription2;
-    
-                // Display the results for model-2
-                document.getElementById("profit2").innerText = "Profit Margin: $" + profit2.toFixed(2);
-                document.getElementById("fanPointsEarned2").innerText = "Fan Points Earned: " + fanPointsEarned2;
-                document.getElementById("fanPointsValue2").innerText = "Fan Points Value: $" + fanPointsValue2.toFixed(2);
-            }
-        </script>
-    </div>
-    
+    <footer>
+        <p>This is the footer.</p>
+    </footer>
 </body>
-
 </html>
