@@ -14,37 +14,179 @@
         <nav>
             <ul>
                 <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="partner.html">Partner Points</a></li>
-                <li><a href="fan.html">Fan Points</a></li>
-                <li><a href="exchange.html">Exchange</a></li>
+                <li><a href="about.html">About</a></li>
             </ul>
         </nav>
     </header>
 
-    <div class="container">
-        <div class="home-title">
-            <h1>Digital Currency Calculator</h1>
-        </div>
-        <div class="logo-box">
-            <p>Logo Image Location</p>
-        </div>
+    <div class="home-title">
+        <h1 class="fade-in main-title">Welcome To Our Digital Currency Calculator!</h1>
     </div>
 
-    <div class="container">
-        <div class="home-paragraph">
-            <P>The following “wizards” help teams
+    <div class="intro fade-in">
+        <div class="container intro-container">
+            <p>The following “wizards” help teams
                 explore “what if” scenarios and build
-                models for deploying:</P>
-            <ul>
-                <li>Partner Points</li>
-                <li>Fan Points</li>
-                <li>Points Exchange</li>
-            </ul>
+                models for deploying:</p>
+                <ul>
+                    <li>Partner Points</li>
+                    <li>Fan Points</li>
+                    <li>Points Exchanges</li>
+                </ul>
         </div>
     </div>
 
-    <footer>
-        <p>This is the footer.</p>
-    </footer>
+    <div class="overcontainer">
+        <div class="container">
+            <h1>Partner Points</h1>
+            <p>Partner Points are
+                purchased from the
+                team at a rate
+                determined by the
+                team. Once partner
+                purchases points,
+                they can use those
+                points as fan
+                incentives and to
+                convert sales leads
+                for their products or
+                services. The revenue
+                generated from
+                selling points to
+                partners can be
+                built into integrated
+                packages being
+                pitched to
+                prospective
+                partners, or sold as
+                an upsell to gain
+                incremental
+                revenue from an
+                existing deal.</p>
+        </div>
+    
+        <div class="container">
+            <label for="sponsorSales">What is your annual sponsorship sales total?</label>
+            <input type="number" id="sponsorSales" min="0">
+    
+            <div class="percent-container">
+                <label for="percentRevenue">What % of revenue would you like to allocate towards points?</label>
+                <input type="number" id="percentRevenue" min="0">
+    
+                <h2>OR</h2>
+    
+                <label for="percentGrowth">What % growth would you like to achieve?</label>
+                <input type="number" id="percentGrowth" min="0">
+            </div>
+    
+            <label for="pointValue">How much do you want to charge per point?</label>
+            <input type="number" id="pointValue" min="0">
+    
+            <button onclick="calculatePartnerOne()">Calculate</button>
+    
+            <label for="totalPoints"></label>
+            <p id="totalPoints" class="answer"></p>
+            <label for="pointValue"></label>
+            <p id="pointsValue" class="answer"></p>
+    
+            <script src="main.js"></script>
+        </div>
+    
+        <div class="container">
+            <label for="annualInvestment">What is this sponsor’s annual investment with the team?</label>
+            <input type="number" id="annualInvestment" min="0">
+        
+            <label for="availablePoints">How many Points does the sponsor have available?</label>
+            <input type="number" id="availablePoints" min="0">
+        
+            <label for="costPerLead">What is the average cost per lead for this sponsor?</label>
+            <input type="number" id="costPerLead" min="0">
+        
+            <label for="pointValue2">How much do you want to charge per point?</label>
+            <input type="number" id="pointValue2" min="0">
+        
+            <button onclick="calculatePartnerTwo()">Calculate</button>
+        
+            <label for="pointsPerLead"></label>
+            <p id="pointsPerLead" class="answer"></p>
+            <label for="totalLeads"></label>
+            <p id="totalLeads" class="answer"></p>
+        </div>
+    </div>
+
+    <div class="overcontainer">
+        <div class="container">
+            <h1>Fan Points</h1>
+            <p>Teams can look at the ways in which points can be allocated to fans.</p>
+        </div>
+    
+        <div class="container">
+            <label for="seasonTicketRevenue">What is your total season ticket revenue?</label>
+            <input type="number" id="seasonTicketRevenue" min="0">
+        
+            <label for="gameTicketRevenue">What is your total single game ticket revenue?</label>
+            <input type="number" id="gameTicketRevenue" min="0">
+        
+            <label for="percentTicketRevenue">What % of your total ticket revenue do you want to
+                allocate to points?</label>
+            <input type="number" id="percentTicketRevenue" min="0">
+        
+            <label for="pointFanValue">How much do you want to charge per point?</label>
+            <input type="number" id="pointFanValue" min="0">
+        
+            <button onclick="calculateFan()">Calculate</button>
+        
+            <label for="totalRevenue"></label>
+            <p id="totalRevenue" class="answer"></p>
+            <label for="totalFanPoints"></label>
+            <p id="totalFanPoints" class="answer"></p>
+            <label for="pointsFanValue"></label>
+            <p id="pointsFanValue" class="answer"></p>
+        
+            <script src="main.js"></script>
+        </div>
+    </div>
+
+    <div class="overcontainer">
+        <div class="container third-container">
+            <h1>Exchange Calculator</h1>
+            <p>Here teams can explore the possibilities of using different exchange rates between fan and partner points.</p>
+        </div>
+    
+        <div class="container third-container">
+            <h1>Fan Points</h1>
+    
+            <label for="fanValue">Enter fan point value.</label>
+            <input type="number" id="fanValue" min="0">
+    
+            <label for="sponsorValue">Enter sponsor point value.</label>
+            <input type="number" id="sponsorValue" min="0">
+    
+            <button onclick="calculateRateOne()">Calculate</button>
+        
+            <label for="exchangeRate"></label>
+            <p id="exchangeRate" class="answer"></p>
+        
+            <script src="main.js"></script>
+        </div>
+    
+        <div class="container third-container">
+            <h1>Partner Points</h1>
+    
+            <label for="partnerValueTwo">Enter partner point value.</label>
+            <input type="number" id="partnerValueTwo" min="0">
+    
+            <label for="sponsorValueTwo">Enter sponsor point value.</label>
+            <input type="number" id="sponsorValueTwo" min="0">
+    
+            <button onclick="calculateRateTwo()">Calculate</button>
+        
+            <label for="exchangeRateTwo"></label>
+            <p id="exchangeRateTwo" class="answer"></p>
+            
+            <script src="main.js"></script>
+        </div>
+    </div>
+
 </body>
 </html>

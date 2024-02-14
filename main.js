@@ -56,15 +56,15 @@ function calculateFan() {
   var seasonTicketRevenue = parseFloat(document.getElementById("seasonTicketRevenue").value);
   var gameTicketRevenue = parseFloat(document.getElementById("gameTicketRevenue").value);
   var percentTicketRevenue = parseFloat(document.getElementById("percentTicketRevenue").value);
-  var pointValue = parseFloat(document.getElementById("pointValue").value);
+  var pointFanValue = parseFloat(document.getElementById("pointFanValue").value);
 
   var totalRevenue = seasonTicketRevenue + gameTicketRevenue;
-  var totalPoints = totalRevenue * (percentTicketRevenue / 100);
-  var pointsValue = totalPoints * pointValue;
+  var totalFanPoints = totalRevenue * (percentTicketRevenue / 100);
+  var pointsFanValue = totalFanPoints * pointFanValue;
 
   document.getElementById("totalRevenue").innerText = "Total Revenue: $" + totalRevenue.toFixed(2);
-  document.getElementById("totalPoints").innerText = "Number of Points To Be Distributed To Buyers: " + totalPoints.toFixed(0);
-  document.getElementById("pointsValue").innerText = "Value of All Distributed Points: $" + pointsValue.toFixed(2);
+  document.getElementById("totalFanPoints").innerText = "Number of Points To Be Distributed To Buyers: " + totalFanPoints.toFixed(0);
+  document.getElementById("pointsFanValue").innerText = "Value of All Distributed Points: $" + pointsFanValue.toFixed(2);
 }
 
 function calculateRateOne() {
@@ -77,10 +77,10 @@ function calculateRateOne() {
 }
 
 function calculateRateTwo() {
-  var partnerValue = parseFloat(document.getElementById("partnerValue").value);
-  var sponsorValue = parseFloat(document.getElementById("sponsorValue").value);
+  var partnerValueTwo = parseFloat(document.getElementById("partnerValueTwo").value);
+  var sponsorValueTwo = parseFloat(document.getElementById("sponsorValueTwo").value);
 
-  var exchangeRate = partnerValue / sponsorValue;
+  var exchangeRateTwo = partnerValueTwo / sponsorValueTwo;
 
-  document.getElementById("exchangeRate").innerText = "Exchange Rate: $" + exchangeRate.toFixed(2);
+  document.getElementById("exchangeRateTwo").innerText = "Exchange Rate: $" + exchangeRateTwo.toFixed(2);
 }
